@@ -1,0 +1,186 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #0d1117;
+    background-image: radial-gradient(#21262d 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kartu Utama */
+.card-container {
+    background: #161b22;
+    border: 3px solid #e62429;
+    border-radius: 16px;
+    padding: 25px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(230, 36, 41, 0.4);
+    position: relative;
+}
+
+.badge {
+    background: #e62429;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.avatar-box {
+    margin: 0 auto 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #0055ff;
+    overflow: hidden;
+}
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.alias {
+    color: #0088ff;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Tombol Data Diri */
+.info-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.btn-info {
+    background-color: #21262d;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-info:hover {
+    background-color: #0055ff;
+    color: #ffffff;
+    border-color: #0055ff;
+}
+
+/* Kustomisasi Khusus Tombol Kategori Instagram */
+.btn-ig:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+/* Layar Tampilan Informasi */
+.display-box {
+    background: #0d1117;
+    border: 1px dashed #e62429;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.display-label {
+    font-size: 0.7rem;
+    color: #e62429;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.display-value {
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* Tombol Aksi Khas Spider-Man & IG Link */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #ffffff;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #e62429;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+/* Efek Spider-Sense */
+.spider-sense-active {
+    animation: pulse-glow 0.4s infinite alternate;
+    border-color: #ffcc00 !important;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 15px #ffcc00;
+        transform: translateY(-2px);
+    }
+    100% {
+        box-shadow: 0 0 35px #ffcc00;
+        transform: translateY(2px);
+    }
+}
