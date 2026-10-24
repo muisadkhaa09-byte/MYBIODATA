@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Bio Presentation | MUIZ ADKHA MAULANA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS for Spidey Effects & Slide Animations -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0b0e14;
+            background-image: 
+                radial-gradient(rgba(230, 36, 41, 0.15) 1px, transparent 0),
+                radial-gradient(rgba(0, 85, 255, 0.1) 1px, #0b0e14 0);
+            background-size: 24px 24px, 12px 12px;
+            background-position: 0 0, 6px 6px;
+            color: #f3f4f6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-tech {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Glassmorphism Cyber Card */
+        .cyber-card {
+            background: rgba(22, 27, 34, 0.85);
+            backdrop-filter: blur(12px);
+            border: 2px solid #e62429;
+            box-shadow: 0 0 25px rgba(230, 36, 41, 0.3), inset 0 0 15px rgba(0, 85, 255, 0.1);
+        }
+
+        /* Spiderweb Corner Overlay */
+        .web-corner-tl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            border-top: 3px solid #e62429;
+            border-left: 3px solid #e62429;
+            pointer-events: none;
+        }
+        .web-corner-br {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-bottom: 3px solid #0055ff;
+            border-right: 3px solid #0055ff;
+            pointer-events: none;
+        }
+
+        /* Custom Button Styling */
+        .btn-spidey-red {
+            background: linear-gradient(135deg, #e62429 0%, #b31217 100%);
+            box-shadow: 0 4px 15px rgba(230, 36, 41, 0.4);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-spidey-red:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(230, 36, 41, 0.6);
+        }
+
+        .btn-spidey-blue {
+            background: linear-gradient(135deg, #0055ff 0%, #003399 100%);
+            box-shadow: 0 4px 15px rgba(0, 85, 255, 0.4);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-spidey-blue:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 85, 255, 0.6);
+        }
+
+        .btn-nav-category {
+            background: rgba(33, 38, 45, 0.9);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            color: #9ca3af;
+            transition: all 0.2s ease;
+        }
+        .btn-nav-category:hover, .btn-nav-category.active {
+            background: rgba(0, 85, 255, 0.25);
+            border-color: #0055ff;
+            color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 85, 255, 0.5);
+        }
+
+        /* Spider-Sense Animation */
+        .spider-sense-flash {
+            animation: spidey-glow 0.3s infinite alternate;
+        }
+        @keyframes spidey-glow {
+            0% {
+                box-shadow: 0 0 30px #ffcc00, inset 0 0 20px #ffcc00;
+                border-color: #ffcc00;
+            }
+            100% {
+                box-shadow: 0 0 60px #e62429, inset 0 0 40px #e62429;
+                border-color: #e62429;
+                transform: translateY(-2px) scale(1.005);
+            }
+        }
+
+        /* Slide Transition Animations */
+        .slide-content {
+            display: none;
+            opacity: 0;
+            transform: scale(0.96) translateY(10px);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .slide-content.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        /* Instagram Gradient Styling */
+        .bg-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between p-3 sm:p-6">
+
+    <div class="kartu-profil">
+        <img src="images.jpg"alt="Foto profil saya">
+        <audio src="Post Malone, Swae Lee - Sunflower (Spider-Man_ Into the Spider-Verse) [ApXoWvfEYVU]"> 
+    <!-- Header / Brand Bar -->
+    <header class="max-w-4xl w-full mx-auto flex flex-wrap justify-between items-center gap-3 mb-4 px-2">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-red-600 border-2 border-yellow-400 flex items-center justify-center text-white text-xl shadow-lg shadow-red-600/50">
+                <i class="fa-solid fa-spider"></i>
+            </div>
+            <div>
+                <h1 class="text-xl sm:text-2xl font-black tracking-wider text-red-500 uppercase">SPIDER-BIO</h1>
+                <p class="text-xs text-blue-400 tracking-widest font-semibold">SMA PLUS ALFALAH ALMAKKY</p>
+            </div>
+        </div>
+
+        <!-- Top Action Controls -->
+        <div class="flex items-center gap-2">
+            <button id="spider-sense-btn" class="px-3 py-1.5 text-xs sm:text-sm font-bold rounded-lg bg-yellow-500 hover:bg-yellow-400 text-black shadow-md shadow-yellow-500/30 transition flex items-center gap-2 active:scale-95">
+                <i class="fa-solid fa-bolt text-red-700"></i>
+                <span class="hidden sm:inline">Aktifkan</span> Spider-Sense
+            </button>
+            <button id="toggle-identity-btn" class="px-3 py-1.5 text-xs sm:text-sm font-bold rounded-lg btn-spidey-blue text-white flex items-center gap-2 active:scale-95">
+                <i class="fa-solid fa-mask"></i>
+                <span id="identity-btn-text">Ubah Identitas</span>
+            </button>
+        </div>
+    </header>
+        <!-- Quick Jump Navigation Grid -->
+        <nav class="max-w-4xl w-full mx-auto mb-5 px-1">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-crosshairs text-red-500"></i> Pilih Kategori Data Diri (Direct Jump):
+            </p>
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-10 gap-1.5 text-xs font-semibold">
+                <button onclick="goToSlide(0)" class="btn-nav-category py-2 px-1 rounded-md text-center active" id="nav-btn-0">Cover</button>
+                <button onclick="goToSlide(1)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-1">Nama</button>
+                <button onclick="goToSlide(2)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-2">TTL</button>
+                <button onclick="goToSlide(3)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-3">Alamat</button>
+                <button onclick="goToSlide(4)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-4">Sekolah</button>
+                <button onclick="goToSlide(5)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-5">Lokasi</button>
+                <button onclick="goToSlide(6)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-6">Kelas</button>
+                <button onclick="goToSlide(7)" class="btn-nav-category py-2 px-1 rounded-md text-center" id="nav-btn-7">Jurusan</button>
+                <button onclick="goToSlide(8)" class="btn-nav-category py-2 px-1 rounded-md text-center text-pink-400 border-pink-500/30" id="nav-btn-8">Instagram</button>
+                <button onclick="goToSlide(9)" class="btn-nav-category py-2 px-1 rounded-md text-center text-yellow-400 border-yellow-500/30" id="nav-btn-9">Penutup</button>
+            </div>
+        </nav>
+
+    <!-- Main Presentation Card Box -->
+    <main class="max-w-4xl w-full mx-auto my-auto relative">
+        <div id="cyber-dossier-card" class="cyber-card rounded-2xl p-5 sm:p-8 relative overflow-hidden transition-all duration-300">
+            <div class="web-corner-tl"></div>
+            <div class="web-corner-br"></div>
+
+            <!-- Header Badge inside Card -->
+            <div class="flex justify-between items-center border-b border-gray-800 pb-3 mb-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-600/20 text-red-400 border border-red-500/40 tracking-wider uppercase">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span> CLASSIFIED DOSSIER
+                </span>
+                <span id="slide-indicator" class="text-xs font-bold text-blue-400 tracking-widest font-tech">
+                    SLIDE 0 / 9
+                </span>
+            </div>
+
+            <!-- SLIDE CONTENT CONTAINER -->
+            <div class="min-h-[280px] flex flex-col justify-center">
+
+                <!-- SLIDE 0: COVER / INTRO -->
+                <div class="slide-content active" id="slide-0">
+                    <div class="text-center py-2">
+                        <div class="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-4">
+                            <div class="w-full h-full rounded-full border-4 border-blue-500 p-1 bg-gray-900 shadow-xl shadow-blue-500/20 overflow-hidden">
+                                <img id="profile-img" src="501015599_17898722790198530_2424583407530525248_n.jpg" alt="Muiz Adkha Maulana" class="w-full h-full object-cover rounded-full">
+                            </div>
+                            <div class="absolute bottom-0 right-0 bg-red-600 text-white rounded-full p-2 text-xs border-2 border-gray-900 shadow">
+                                <i class="fa-solid fa-mask"></i>
+                            </div>
+                        </div>
+
+                        <h2 id="hero-title-display" class="text-2xl sm:text-4xl font-black tracking-wide text-white mb-1">MUIZ ADKHA MAULANA</h2>
+                        <p id="hero-alias-display" class="text-sm sm:text-base text-blue-400 italic mb-4 font-semibold">"With great coding power comes great responsibility!"</p>
+
+                        <p class="text-xs sm:text-sm text-gray-300 max-w-lg mx-auto bg-gray-900/60 p-3 rounded-lg border border-gray-800 mb-6">
+                            Selamat datang di presentasi perkenalan diri interaktif berbasis web bertema Spider-Man. Klik tombol di bawah atau gunakan menu navigasi untuk melihat berkas pahlawan!
+                        </p>
+
+                        <button onclick="goToSlide(1)" class="btn-spidey-red px-8 py-3.5 rounded-xl font-black text-white text-base tracking-widest uppercase flex items-center gap-2 mx-auto shadow-lg shadow-red-600/40">
+                            <span>MULAI</span> <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SLIDE 1: NAMA -->
+                <div class="slide-content" id="slide-1">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-id-card"></i> Identitas Utamamu
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">NAMA LENGKAP</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-red-500/50 shadow-lg shadow-red-500/10">
+                            <p class="text-2xl sm:text-4xl font-black text-yellow-400 tracking-wider">MUIZ ADKHA MAULANA</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-blue-950/30 border border-blue-500/30 text-xs sm:text-sm text-blue-200">
+                            <i class="fa-solid fa-spider text-red-400 mr-2"></i><strong>Spidey Note:</strong> Terdaftar sebagai Agen Utama pengembang web & calon inovator startup masa depan dari kelas XI-A.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: TTL -->
+                <div class="slide-content" id="slide-2">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-days"></i> Tanggal Kebangkitan Pahlawan
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">TEMPAT & TGL LAHIR</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-blue-500/50 shadow-lg shadow-blue-500/10">
+                            <p class="text-2xl sm:text-4xl font-black text-blue-400 tracking-wider">21 NOVEMBER 2009</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-900/60 border border-gray-800 text-xs sm:text-sm text-gray-300">
+                            <i class="fa-solid fa-cake-candles text-yellow-400 mr-2"></i> Hari lahir agen pahlawan muda yang memadukan semangat belajar dengan passion di bidang sains & teknologi!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3: ALAMAT -->
+                <div class="slide-content" id="slide-3">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney-crack"></i> Markas / HQ Pribadi
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">ALAMAT RUMAH</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-red-500/50 shadow-lg shadow-red-500/10">
+                            <p class="text-2xl sm:text-3xl font-black text-red-400 tracking-wide uppercase">LEBAKHARJO, AMPELGADING</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-900/60 border border-gray-800 text-xs sm:text-sm text-gray-300">
+                            <i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Koordinat lokasi markas utama tempat eksperimen ide-ide kreatif dan pengembangan skill coding dilakukan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4: SEKOLAH -->
+                <div class="slide-content" id="slide-4">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-building-columns"></i> Akademi Pahlawan
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">ASAL SEKOLAH</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10">
+                            <p class="text-2xl sm:text-3xl font-black text-yellow-400 tracking-wide uppercase">SMA PLUS ALFALAH ALMAKKY</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-yellow-950/30 border border-yellow-500/30 text-xs sm:text-sm text-yellow-200">
+                            <i class="fa-solid fa-graduation-cap text-yellow-400 mr-2"></i> Tempat menempa ilmu, karakter, serta keterampilan teknologi bernilai tinggi.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5: ALAMAT SEKOLAH -->
+                <div class="slide-content" id="slide-5">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot"></i> Sektor Akademi
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">ALAMAT SEKOLAH</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-blue-500/50 shadow-lg shadow-blue-500/10">
+                            <p class="text-2xl sm:text-3xl font-black text-blue-300 tracking-wide uppercase">PUTATLOR, GONDANGLEGI</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-900/60 border border-gray-800 text-xs sm:text-sm text-gray-300">
+                            <i class="fa-solid fa-compass text-blue-400 mr-2"></i> Lokasi strategis kampus sekolah tempat para murid unggulan berkumpul dan berkembang.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 6: KELAS -->
+                <div class="slide-content" id="slide-6">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-users-viewfinder"></i> Skuad Ditempatkan
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-wide">KELAS SAAT INI</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-red-500/50 shadow-lg shadow-red-500/10 flex items-center justify-between">
+                            <p class="text-4xl sm:text-6xl font-black text-red-500 tracking-wider">XI-A</p>
+                            <div class="text-right text-xs text-gray-400">
+                                <p class="font-bold text-white text-sm">SKUAD UNGGULAN</p>
+                                <p>Tingkat Menengah Atas</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-red-950/30 border border-red-500/30 text-xs sm:text-sm text-red-200">
+                            <i class="fa-solid fa-fire text-red-400 mr-2"></i> Kelas XI-A: Berisi pasukan bersemangat tinggi yang siap melesat maju di bidang akademik & teknologi.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 7: JURUSAN -->
+                <div class="slide-content" id="slide-7">
+                    <div class="space-y-4">
+                        <div class="text-red-500 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-laptop-code"></i> Spesialisasi Kekuatan
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-wide">PEMINATAN / JURUSAN</h2>
+                        <div class="p-5 sm:p-6 rounded-xl bg-gray-900/80 border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10">
+                            <p class="text-2xl sm:text-3xl font-black text-yellow-400 tracking-wide uppercase">IPA / INFORMATIKA TINGKAT LANJUT</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-blue-950/40 border border-blue-500/40 text-xs sm:text-sm text-blue-200">
+                            <i class="fa-solid fa-microchip text-blue-400 mr-2"></i> Fokus pada logika pemrograman, analisis sains, dan perancangan aplikasi digital berbasis web.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 8: INSTAGRAM -->
+                <div class="slide-content" id="slide-8">
+                    <div class="space-y-4 text-center py-2">
+                        <div class="text-pink-500 font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-instagram"></i> Saluran Komunikasi Sinyal
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-wide">OFFICIAL INSTAGRAM</h2>
+                        
+                        <div class="p-6 rounded-2xl bg-gray-900/90 border-2 border-pink-500/50 max-w-md mx-auto shadow-xl shadow-pink-500/10">
+                            <div class="w-16 h-16 rounded-2xl bg-instagram mx-auto mb-3 flex items-center justify-center text-white text-3xl shadow-lg">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <p class="text-xl sm:text-2xl font-black text-white mb-1">@muiz_adkha_maulana</p>
+                            <p class="text-xs text-gray-400 mb-5">Mari terhubung & berkolaborasi untuk proyek teknologi berikutnya!</p>
+                            
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-instagram py-3 px-6 rounded-xl text-white font-bold text-sm inline-flex items-center gap-2 w-full justify-center shadow-lg transition hover:opacity-90 active:scale-95">
+                                <i class="fa-brands fa-instagram text-lg"></i> Kunjungi Instagram Saya
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 9: UCAPAN PENUTUP -->
+                <div class="slide-content" id="slide-9">
+                    <div class="space-y-5 text-center py-4">
+                        <div class="w-20 h-20 bg-gradient-to-tr from-red-600 to-yellow-500 rounded-full mx-auto flex items-center justify-center text-white text-4xl shadow-xl shadow-red-600/30 animate-bounce">
+                            <i class="fa-solid fa-hand-wave"></i>
+                        </div>
+                        
+                        <div class="p-6 rounded-2xl bg-gray-900/90 border-2 border-yellow-500/60 shadow-xl shadow-yellow-500/10 max-w-xl mx-auto space-y-3">
+                            <h2 class="text-2xl sm:text-4xl font-black text-yellow-400 tracking-wide uppercase leading-tight">
+                                TERIMA KASIH ATAS KUNJUNGAN ANDA.
+                            </h2>
+                            <p class="text-lg sm:text-2xl font-bold text-white tracking-wider">
+                                SALAM KENAL YA TEMAN-TEMAN...! 🕸️✨
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <button onclick="goToSlide(0)" class="btn-spidey-blue px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white inline-flex items-center gap-2 shadow-lg">
+                                <i class="fa-solid fa-rotate-left"></i> <span>Kembali ke Halaman Utama</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Main Slide Controls -->
+            <div class="flex justify-between items-center mt-6 pt-4 border-t border-gray-800">
+                <button id="prev-btn" onclick="prevSlide()" class="btn-spidey-blue px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                    <i class="fa-solid fa-chevron-left"></i> <span>Sebelumnya</span>
+                </button>
+
+                <!-- Center Progress Dot Indicators -->
+                <div class="hidden sm:flex items-center gap-1.5" id="dots-container">
+                    <!-- Javascript will render dots -->
+                </div>
+
+                <button id="next-btn" onclick="nextSlide()" class="btn-spidey-red px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                    <span>Berikutnya</span> <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl w-full mx-auto text-center mt-6 text-xs text-gray-500">
+        <p>© 2026 MUIZ ADKHA MAULANA • SMA PLUS ALFALAH ALMAKKY • SPIDER-BIO PRESENTATION WEB</p>
+    </footer>
+
+    <!-- JavaScript Navigation & Effects -->
+    <script>
+        const totalSlides = 10; // 0 to 9
+        let currentSlide = 0;
+        let isHeroMode = false;
+
+        // Initialize On Load
+        window.onload = function() {
+            renderDots();
+            updateSlideUI();
+        };
+
+        // Navigate to specific slide directly
+        function goToSlide(index) {
+            if (index < 0 || index >= totalSlides) return;
+            currentSlide = index;
+            updateSlideUI();
+        }
+
+        // Next Slide Action
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlideUI();
+            }
+        }
+
+        // Previous Slide Action
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlideUI();
+            }
+        }
+
+        // Update active slide, buttons, indicators
+        function updateSlideUI() {
+            // Hide all slides and remove active class
+            for (let i = 0; i < totalSlides; i++) {
+                const slideEl = document.getElementById(`slide-${i}`);
+                const navBtnEl = document.getElementById(`nav-btn-${i}`);
+                
+                if (slideEl) slideEl.classList.remove('active');
+                if (navBtnEl) navBtnEl.classList.remove('active');
+            }
+
+            // Show target slide
+            const activeSlide = document.getElementById(`slide-${currentSlide}`);
+            if (activeSlide) activeSlide.classList.add('active');
+
+            // Highlight target nav category button
+            const activeNavBtn = document.getElementById(`nav-btn-${currentSlide}`);
+            if (activeNavBtn) activeNavBtn.classList.add('active');
+
+            // Update Slide Indicator Text
+            document.getElementById('slide-indicator').innerText = `SLIDE ${currentSlide} / ${totalSlides - 1}`;
+
+            // Update Prev/Next Buttons state
+            document.getElementById('prev-btn').disabled = (currentSlide === 0);
+            document.getElementById('next-btn').disabled = (currentSlide === totalSlides - 1);
+
+            // Update Dots
+            updateDots();
+        }
+
+        // Render Dots for Slide Progress
+        function renderDots() {
+            const dotsContainer = document.getElementById('dots-container');
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === 0 ? 'bg-red-500 w-4' : 'bg-gray-700'}`;
+                dot.onclick = () => goToSlide(i);
+                dot.id = `dot-${i}`;
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if (dot) {
+                    if (i === currentSlide) {
+                        dot.className = 'w-4 h-2 rounded-full bg-red-500 transition-all';
+                    } else {
+                        dot.className = 'w-2 h-2 rounded-full bg-gray-700 transition-all cursor-pointer';
+                    }
+                }
+            }
+        }
+
+        // Keyboard Arrow Key Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Spider-Sense Effect Button
+        const spiderSenseBtn = document.getElementById('spider-sense-btn');
+        const cardContainer = document.getElementById('cyber-dossier-card');
+
+        spiderSenseBtn.addEventListener('click', () => {
+            cardContainer.classList.add('spider-sense-flash');
+            
+            // Temporary Alert / Feedback
+            setTimeout(() => {
+                alert('⚡ SPIDER-SENSE BERGETAR! Sinyal Keberadaan Agen Muiz Adkha Maulana Terverifikasi Sangat Kuat!');
+            }, 100);
+
+            setTimeout(() => {
+                cardContainer.classList.remove('spider-sense-flash');
+            }, 2500);
+        });
+
+        // Identity Switcher Toggle
+        const toggleIdentityBtn = document.getElementById('toggle-identity-btn');
+        const identityBtnText = document.getElementById('identity-btn-text');
+        const heroTitle = document.getElementById('hero-title-display');
+        const heroAlias = document.getElementById('hero-alias-display');
+
+        toggleIdentityBtn.addEventListener('click', () => {
+            isHeroMode = !isHeroMode;
+
+            if (isHeroMode) {
+                identityBtnText.innerText = "Mode Siswa";
+                if(heroTitle) heroTitle.innerText = "SPIDER-MUIZ 🕷️";
+                if(heroAlias) heroAlias.innerText = "Alias: The Friendly Neighborhood Tech Student";
+            } else {
+                identityBtnText.innerText = "Ubah Identitas";
+                if(heroTitle) heroTitle.innerText = "MUIZ ADKHA MAULANA";
+                if(heroAlias) heroAlias.innerText = `"With great coding power comes great responsibility!"`;
+            }
+        });
+    </script>
+</body>
+</html>
